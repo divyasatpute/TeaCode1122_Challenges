@@ -6,42 +6,49 @@ Welcome to the official **TeaCode1122 Challenges Hub**! 🎉
 
 ---
 
-## 📁 Challenge Levels (By Week)
+## 📁 Challenge Levels
 
-### 🔹 Easy
-Perfect for beginners. Build confidence and learn fundamentals.
-- [ ] [Week 1: Print system uptime using Shell script](easy/week-1/README.md)
+### 🔹 [Easy Challenges](easy/)
+Perfect for beginners. Build confidence and learn the fundamentals.
+- ✅ Weekly beginner-friendly tasks
+- ✅ Shell scripting, Linux basics, automation starters
 
-### 🔸 Medium
-For intermediate learners looking to automate and integrate.
-- [ ] [Week 1: Setup Nginx as a reverse proxy](medium/week-1/README.md)
+### 🔸 [Medium Challenges](medium/)
+For intermediate learners ready to automate and integrate.
+- ✅ Hands-on infrastructure and config tasks
+- ✅ Tools like Nginx, Docker, and Git
 
-### 🔺 Advanced
-Challenge yourself with real-world, production-level tasks.
-- [ ] [Week 1: CI/CD Pipeline using Jenkins + GitHub + Helm](advanced/week-1/README.md)
+### 🔺 [Advanced Challenges](advanced/)
+Challenge yourself with real-world, production-level problems.
+- ✅ End-to-end CI/CD, Kubernetes, Helm, Monitoring
+- ✅ Ideal for DevOps job readiness
 
 ---
 
 ## 🚀 How to Participate
+
 1. **Fork this repo**
-2. Go to the challenge folder (e.g., `easy/week-1/`)
-3. Create a new folder with your GitHub username inside the challenge folder
+2. Navigate to the challenge folder (e.g., `easy/week-1/`)
+3. Create a new folder with your GitHub username  
    Example: `easy/week-1/@yourusername/`
 4. Add your solution files there
-5. Raise a PR (pull request) with the subject: `Completed Challenge - Easy Week 1 - @yourusername`
+5. Raise a PR with the subject:  
+   `Completed Challenge - Easy Week 1 - @yourusername`
 
 ✅ Your PR will be reviewed, and your name added to our Wall of Fame!
 
 ---
 
 ## 🧠 Weekly Flow
+
 - 📢 **New challenges every Monday**
 - 🎥 **Live review sessions every Saturday**
-- 💬 **Ask questions in GitHub Discussions or our Telegram group: [Join Here](https://t.me/teacode1122)**
+- 💬 **Discuss with us on [Telegram](https://t.me/teacode1122) or GitHub [Discussions](https://github.com/teacode1122-challenges/discussions)**
 
 ---
 
 ## 👑 Leaderboard & Rewards
+
 Top contributors will receive:
 - 🎖️ Digital Badges
 - 🌟 Special Mentions on Instagram & LinkedIn
@@ -50,11 +57,31 @@ Top contributors will receive:
 ---
 
 ## 📸 TeaWall (Community Showcase)
-Want your work featured on our page? Tag us @teacode1122 and use `#TeaCodeChallenge` 🧡
+
+Want your work featured on our page?  
+Tag us **@teacode1122** and use `#TeaCodeChallenge` 🧡
 
 ---
 
 ## 💬 Let's Build Together
-Have a creative challenge idea? Submit it in [Discussions](https://github.com/teacode1122-challenges/discussions)
+
+Have a creative challenge idea?  
+Submit it in [GitHub Discussions](https://github.com/teacode1122-challenges/discussions)
 
 > Made with ☕ by the TeaCode1122 Community
+
+---
+
+## 🔗 Connect with Me Everywhere! 🌍
+
+👩‍💻 **Created & Maintained by [Divya Satpute](https://www.linkedin.com/in/divya-satpute-68666a300/)**  
+Founder of TeaCode1122 | DevOps Enthusiast | Community Builder
+
+📌 **LinkedIn**: [Divya Satpute](https://www.linkedin.com/in/divya-satpute-68666a300/)  
+📌 **Instagram (DevOps Content)**: [@teacode1122](https://www.instagram.com/teacode1122/)  
+📌 **GitHub**: [divyasatpute/vprofile-awsliftshift-project](https://github.com/divyasatpute/vprofile-awsliftshift-project)  
+📌 **Hashnode (Technical Blogs)**: [learnwithdivya.hashnode.dev](https://learnwithdivya.hashnode.dev/)  
+📌 **TeaCode Website**: [teacode1122.vercel.app](https://teacode1122.vercel.app/)  
+📌 **YouTube (Teacode - DevOps Learning)**: [Teacode-1122](https://www.youtube.com/@Teacode-1122)
+
+💬 Let’s connect, collaborate, and grow together in the DevOps & Cloud world! 🚀✨
