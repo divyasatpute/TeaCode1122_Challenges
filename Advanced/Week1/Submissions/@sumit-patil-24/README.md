@@ -1,4 +1,5 @@
 # Update package list
+'''
 sudo apt update
 
 # Install JDK 17
@@ -38,7 +39,7 @@ git clone https://github.com/sumit-patil-24/Valentine-Day-DevOps-Project.git
 cd Valentine-Day-DevOps-Project
 
 helm install release ./helm_chart
-
+'''
 ---
 
 seervice account
