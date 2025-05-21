@@ -53,7 +53,7 @@ kind create cluster --name=kind-demo-cluster
 
 ### Install Helm
 ```shell
-sudo snap install helm -y
+sudo snap install helm --classic
 ```
 
 
