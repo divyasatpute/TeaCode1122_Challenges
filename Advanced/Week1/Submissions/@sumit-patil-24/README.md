@@ -10,7 +10,7 @@ This guide provides step-by-step instructions to set up Jenkins, Docker, Kuberne
 ## Step 1: Install Dependencies
 
 ### Update package list and install JDK 17
-bash
+```shell
 sudo apt update
 sudo apt install openjdk-17-jdk -y
-
+```
