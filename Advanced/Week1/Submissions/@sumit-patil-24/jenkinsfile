@@ -1,0 +1,63 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/sumit-patil-24/Valentine-Day-DevOps-Project.git'
+            }
+        }
+        
+        stage('docker build and push') {
+            steps {
+                script {
+                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker ') {
+                        sh 'docker build -t sumit202/valentine:$BUILD_NUMBER .'                    }
+                }
+            }
+        }
+        
+        stage('Update Deployment File') {
+        environment {
+            GIT_REPO_NAME = "Valentine-Day-DevOps-Project"
+            GIT_USER_NAME = "sumit-patil-24"
+        }
+        steps {
+            withCredentials([string(credentialsId: 'github_token', variable: 'GITHUB_TOKEN')]) {
+                sh '''
+                    git config user.email "sumit425412@gmail.com"
+                    git config user.name "sumit patil"
+                    BUILD_NUMBER=${BUILD_NUMBER}
+                    sed -i "s/tag:.*/tag: ${BUILD_NUMBER}/g" helm_chart/values.yaml
+                    git add helm_chart/values.yaml
+                    git commit -m "Update deployment image to version ${BUILD_NUMBER}"
+                    git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
+                '''
+            }
+        }
+    }
+        
+        stage('deploy to k8s') {
+            steps {
+                script {
+                    // Use kubectl to apply the updated Helm chart
+                    withKubeConfig(caCertificate: '', clusterName: 'kind-demo-cluster', contextName: 'kind-demo-cluster', credentialsId: 'k8s-token', namespace: 'default', restrictKubeConfigAccess: false, serverUrl: 'https://127.0.0.1:44107') {
+                        sh "helm upgrade release helm_chart/ --namespace default --reuse-values" // Replace with your release name and namespace
+                    }
+                }
+            }
+        }
+        
+        stage('varification') {
+            steps {
+                script {
+                    // Use kubectl to apply the updated Helm chart
+                    withKubeConfig(caCertificate: '', clusterName: 'kind-demo-cluster', contextName: 'kind-demo-cluster', credentialsId: 'k8s-token', namespace: 'default', restrictKubeConfigAccess: false, serverUrl: 'https://127.0.0.1:44107') {
+                        sh "kubectl rollout status deployment/release-project --namespace=default --timeout=60s"
+                    }
+                }
+            }
+        }
+    }
+}
+
