@@ -26,7 +26,3 @@ Learn how to create a Docker image and run a containerized web app.
     docker build -t teacode-flask .
     docker run -p 5000:5000 teacode-flask
     ```
-
-###output
-
-![App Screenshot](https://github.com/sumit-patil-24/TeaCode1122_Challenges/blob/main/Screenshot 2025-06-01 101638.png?raw=true)
