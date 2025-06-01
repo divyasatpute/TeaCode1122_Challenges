@@ -18,7 +18,7 @@ Learn how to create a Docker image and run a containerized web app.
     WORKDIR /app
     COPY . .
     RUN pip install flask
-    CMD ["python", "app.py"]
+    CMD ["python", "app.py", "--host=0.0.0.0", "--port=5000"]
     ```
 
 3. Build & Run:
