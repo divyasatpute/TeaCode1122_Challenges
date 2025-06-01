@@ -29,3 +29,4 @@ Learn how to create a Docker image and run a containerized web app.
 
 ###output
 
+![App Screenshot](https://github.com/sumit-patil-24/TeaCode1122_Challenges/blob/main/Screenshot 2025-06-01 101638.png?raw=true)
