@@ -76,3 +76,24 @@ You should see output similar to this:
 Server listening at http://localhost:3000
 Requests will be logged to: /path/to/your/my-logging-app/app/logs/requests.log
 ```
+
+2. Create a multi-stage Dockerfile:
+    ```dockerfile
+    # Build stage
+    FROM node:18-alpine AS builder
+    WORKDIR /app
+    COPY . .
+    RUN npm install
+
+    # Run stage
+    FROM node:18-alpine
+    WORKDIR /app
+    COPY --from=builder /app .
+    VOLUME [ "/app/logs" ]
+    CMD ["node", "app.js"]
+    ```
+
+3. Run with a volume:
+    ```bash
+    docker run -v logs-vol:/app/logs -p 3000:3000 teacode-node
+    ```
