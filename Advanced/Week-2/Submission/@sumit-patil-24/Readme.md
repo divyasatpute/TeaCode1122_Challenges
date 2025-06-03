@@ -11,22 +11,22 @@ cd my-logging-app
  ```
 
 2. Initialize your Node.js project:
-    ```bash
-    npm init -y
-    ```
+```bash
+npm init -y
+```
 This will create a package.json file.
 
 3.Install necessary packages:
 We'll use express for the web server and morgan for HTTP request logging.
-    ```bash
-    npm install express morgan
-    ```
+```bash
+npm install express morgan
+```
 
 4.Create the logging directory:
 It's good practice to ensure the log directory exists.
-    ```bash
-    mkdir -p app/logs
-    ```
+```bash
+mkdir -p app/logs
+```
 
 5.Create your main application file (app.js):
 Create a file named app.js in your my-logging-app directory and add the following code:
