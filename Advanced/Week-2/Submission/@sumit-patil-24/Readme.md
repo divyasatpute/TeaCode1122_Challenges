@@ -5,10 +5,10 @@ Node.js and docker installed on your system.
 ## Steps:
 
 1.Create your project directory:
-    ```bash
-    mkdir my-logging-app
-    cd my-logging-app
-    ```
+```bash
+mkdir my-logging-app
+cd my-logging-app
+ ```
 
 2. Initialize your Node.js project:
     ```bash
