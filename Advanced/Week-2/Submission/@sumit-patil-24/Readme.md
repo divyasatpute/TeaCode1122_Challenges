@@ -10,7 +10,7 @@ mkdir my-logging-app
 cd my-logging-app
  ```
 
-2. Initialize your Node.js project:
+2.Initialize your Node.js project:
 ```bash
 npm init -y
 ```
@@ -30,6 +30,7 @@ mkdir -p app/logs
 
 5.Create your main application file (app.js):
 Create a file named app.js in your my-logging-app directory and add the following code:
+
     ```bash
     const express = require('express');
     const morgan = require('morgan');
