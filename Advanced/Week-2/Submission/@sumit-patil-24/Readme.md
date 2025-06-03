@@ -1,6 +1,6 @@
 # Node.js Logging App with Docker
 
-This guide will help you create a basic Node.js application that logs incoming requests to a file named `/app/logs/requests.log` and containerize it using Docker.
+This guide will help you create a basic Node.js application that logs incoming requests to a file named `/app/logs/requests.log` and containerize it.
 
 ### Prerequisites:
 
@@ -94,6 +94,8 @@ This guide will help you create a basic Node.js application that logs incoming r
     Requests will be logged to: /path/to/your/my-logging-app/app/logs/requests.log
     ```
 
+---
+
 ### Containerizing with Docker
 
 7.  **Create a multi-stage Dockerfile:**
@@ -104,18 +106,14 @@ This guide will help you create a basic Node.js application that logs incoming r
     # Build stage
     FROM node:18-alpine AS builder
     WORKDIR /app
-    COPY package*.json ./
-    RUN npm install
     COPY . .
+    RUN npm install
 
     # Run stage
     FROM node:18-alpine
     WORKDIR /app
     COPY --from=builder /app .
-    # Create the logs directory if it doesn't exist within the container
-    RUN mkdir -p /app/logs
     VOLUME [ "/app/logs" ]
-    EXPOSE 3000
     CMD ["node", "app.js"]
     ```
 
