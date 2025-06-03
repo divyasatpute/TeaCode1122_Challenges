@@ -1,34 +1,35 @@
-### This guide will help you create a basic Node.js application that logs incoming requests to a file named /app/logs/requests.log
+### This guide will help you create a basic Node.js application that logs incoming requests to a file named /app/logs/requests.log & containerize it.
 ## Prerequisites:
-Node.js installed on your system.
+Node.js and docker installed on your system.
 
 ## Steps:
-## 1.Create your project directory:
+
+1.Create your project directory:
 ```bash
 mkdir my-logging-app
 cd my-logging-app
 ```
 
-## 2. Initialize your Node.js project:
+2. Initialize your Node.js project:
 
 ```bash
 npm init -y
 ```
 This will create a package.json file.
 
-## 3.Install necessary packages:
+3.Install necessary packages:
 We'll use express for the web server and morgan for HTTP request logging.
 ```bash
 npm install express morgan
 ```
 
-## 4.Create the logging directory:
+4.Create the logging directory:
 It's good practice to ensure the log directory exists.
 ```bash
 mkdir -p app/logs
 ```
 
-## 5.Create your main application file (app.js):
+5.Create your main application file (app.js):
 Create a file named app.js in your my-logging-app directory and add the following code:
 ```bash
 const express = require('express');
@@ -67,7 +68,7 @@ app.listen(port, () => {
 });
 ```
 
-## 6.Run your application:
+6.Run your application:
 ```bash
 node app.js
 ```
@@ -93,7 +94,12 @@ Requests will be logged to: /path/to/your/my-logging-app/app/logs/requests.log
     CMD ["node", "app.js"]
     ```
 
-3. Run with a volume:
+3. build docker image
+   ```bash
+   docker build -t teacode-node .
+   ```
+
+4. Run with a volume:
     ```bash
     docker run -v logs-vol:/app/logs -p 3000:3000 teacode-node
     ```
